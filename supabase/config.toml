@@ -1,0 +1,29 @@
+project_id = "investment-intelligence-platform"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/reset-password"]
+enable_signup = true
+
+[functions.market-data]
+verify_jwt = true
+[functions.fundamentals]
+verify_jwt = true
+[functions.ai-analysis]
+verify_jwt = true
+
+[storage]
+enabled = false
+
+[analytics]
+enabled = false
